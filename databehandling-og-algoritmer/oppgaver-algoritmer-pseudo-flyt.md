@@ -113,4 +113,95 @@ def trekanttall(n):
 trekanttall(1)
 ```
 
+## Oppgave 9
+
+# 1 
+```pseudo
+SET n TO 1
+WHILE n LESSER THAN OR EQUAL TO 10
+  INCREMENT n
+  DISPLAY n
+ENDWHILE
+```
+(2,3,4,5,6,7,8,9,10,11)
+
+# 2
+```pseudo
+SET n TO 0
+FOR hver n LESSER THAN OR EQUAL TO 10
+  DISPLAY n
+ENDFOR
+```
+
+```python
+n = 0
+for n in range(11):
+  print(n)
+```
+(0,1,2,3,4,5,6,7,8,9,10)
+
+# 3
+```pseudo
+SET n TO 1
+WHILE n LESSER THAN 10
+  DISPLAY n
+  INCREMENT n
+ENDWHILE
+```
+
+```python
+n = 1
+while n < 10:
+  print(n)
+  n += 1
+```
+(1,2,3,4,5,6,7,8,9)
+
+# 4 
+```pseudo
+SET n TO 1
+FOR hver n LESSER THAN OR EQUAL TO 10
+  DISPLAY n
+ENDFOR
+```
+
+```python
+n = 1 
+for n in range(n, 11):
+  print(n)
+```
+(1,2,3,4,5,6,7,8,9,10)
+
+# svar = 4
+
+## Oppgave 10
+
+```python
+listen = [32, 10, -5, 99, 1]
+# 1. (Riktig)
+størst = float("-inf")
+for tall in listen:
+  if tall > størst:
+    størst = tall 
+listen.remove(størst)
+nestStørst = float("-inf")
+for tall in listen:
+  if tall > nestStørst:
+    nestStørst = tall
+print(nestStørst)
+
+# 2. 
+størst = listen[0]
+nestStørst = listen[1]
+
+if nestStørst > størst:
+  størst, nestStørst = nestStørst, størst # bytter verdier på variablene
+for tall in listen[2:]:
+  if tall > størst:
+    nestStørst = størst 
+    størst = tall
+  elif tall > nestStørst and tall != størst:
+    nestStørst = tall
+
+```
 
