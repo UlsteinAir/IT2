@@ -176,6 +176,19 @@ for n in range(n, 11):
 
 ## Oppgave 10
 
+# svar:
+1-F
+2-H
+3-A
+4-B
+5-C
+6-G
+7-E
+8-D
+
+
+## Oppgave 11
+
 ```python
 listen = [32, 10, -5, 99, 1]
 # 1. (Riktig)
@@ -190,7 +203,7 @@ for tall in listen:
     nestStørst = tall
 print(nestStørst)
 
-# 2. 
+# 2. (Feil)
 størst = listen[0]
 nestStørst = listen[1]
 
@@ -202,6 +215,22 @@ for tall in listen[2:]:
     størst = tall
   elif tall > nestStørst and tall != størst:
     nestStørst = tall
+print(nestStørst)
+
+# 3. (Feil)
+størst = float("-inf")
+nestStørst = float("-inf")
+for tall in listen:
+  if tall > størst:
+    nestStørst = størst 
+    størst = tall
+  elif tall > nestStørst:
+    nestStørst = tall 
+print(nestStørst)
+
+# 4.
 
 ```
+
+# svar: 1 og 4
 
